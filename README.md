@@ -5,6 +5,10 @@
 ## Quick start
 
 ```python
+# Imports
+from erc5564py.stealth_meta_address import generate_stealth_meta_address, generate_stealth_address
+from erc5564py.stealth_address import computeStealthAddress, computeStealthKey
+from erc5564py.utils import point_from_hex
 # Generate Stealth Meta-Address
 stealth_meta_address, spending_private_key, viewing_private_key = generate_stealth_meta_address()
 
