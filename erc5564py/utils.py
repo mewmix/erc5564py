@@ -4,12 +4,7 @@ from ecdsa import SECP256k1
 from ecdsa.ellipticcurve import Point
 from Crypto.Hash import keccak
 
-def point_from_hex(hex_str):
-    # Converts a hex string to an ECDSA point
-    byte_array = bytearray.fromhex(hex_str)
-    x_coord = int.from_bytes(byte_array[:32], byteorder='big')
-    y_coord = int.from_bytes(byte_array[32:], byteorder='big')
-    return Point(SECP256k1.curve, x_coord, y_coord)
+
 
 def point_to_eth_addr(point):
     # Converts an ECDSA point to an Ethereum address
